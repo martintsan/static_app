@@ -5,39 +5,14 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-      </script>
-    <![endif]-->
+    <%= render 'layouts/shim' %>
   </head>
 
   <body>
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Sample App</a>
-        <div class="collapse navbar-collapse" id="main-navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Help</a>
-            </li>
-            <li>
-              <a href="#">Log in</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
