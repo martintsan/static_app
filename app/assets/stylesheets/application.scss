@@ -1,6 +1,8 @@
+@import "mixins";
 @import "bootstrap.min";
 @import "normalize";
 @import "static_pages";
+@import "users";
 /* Header */
 #logo {
   float: left;
@@ -35,4 +37,14 @@ footer {
       margin-left: 15px;
     }
   }
+}
+/* mixins, variables, etc. */
+$gray-medium-light: #eaeaea;
+/* miscellaneous */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
