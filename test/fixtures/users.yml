@@ -2,4 +2,3 @@ martin:
   name: Martin Nett
   email: martin_nett@icloud.com
   password_digest: <%= User.digest('q1w2e3r4') %>
-  
